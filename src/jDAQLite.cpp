@@ -680,7 +680,7 @@ int main (int argc, char **argv)
         } else {
                 cout << "\tusage: jDAQLite baseaddress [options]" << endl << endl;
                 cout << "If no options are provided, a list of all available options for the device" << endl << "found at the given baseaddress is shown." << endl << endl;
-                exit(1);
+                exit(0);
         }
         
 

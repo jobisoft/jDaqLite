@@ -34,6 +34,6 @@ env:
 script:
   - env
   - make
-# - make install
-# - cd ${TRAVIS_BUILD_DIR}/install
-# - jDAQLite
+  - make install
+  - cd ${TRAVIS_BUILD_DIR}/install
+  - jDAQLite

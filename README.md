@@ -1,2 +1,2 @@
 # jDaqLite
-Standalone DAQ for jTDC modules (FPGA based 30ps RMS TDCs)
+Standalone DAQ for example implementation of jTDC modules (FPGA based 30ps RMS TDCs)

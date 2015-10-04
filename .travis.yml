@@ -1,26 +1,22 @@
 language: cpp
 
+sudo: false
+
 compiler:
   - clang
   - gcc
 
-before_install:
-  # g++ 4.8 on linux
-  - if [ "$CXX" == "g++" ]; then sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test; fi
-
-  # clang 3.4 - already with travis
-  #- if [ "$CXX" == "clang++" ]; then sudo add-apt-repository -y ppa:h-rayflood/llvm; fi
-
-  - sudo apt-get update -qq
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - libusb-1.0-0-dev
+      - g++-5
 
 install:
-  # g++ 4.8 on linux
-  - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
-  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8"; fi
-
-  # clang 3.4 - already with travis
-  #- if [ "$CXX" == "clang++" ]; then sudo apt-get install --allow-unauthenticated -qq clang-3.4; fi
-  #- if [ "$CXX" == "clang++" ]; then export CXX="clang++-3.4"; fi
+  # g++ 5 on linux
+  - if [ "$CXX" = "g++" ]; then export CXX="g++-5"; fi
 
 before_script:
   - mkdir -p ${TRAVIS_BUILD_DIR}/build

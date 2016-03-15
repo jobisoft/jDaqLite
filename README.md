@@ -5,4 +5,4 @@ This program is using the Universe II PCI-VME bridge to communicate with the FPG
 ```
 ./jDAQLite [baseaddress]
 ```
-should provide you with a list of all available options for the module at the given baseadress.
+should provide you a list of all available options for the module at the given baseadress.
